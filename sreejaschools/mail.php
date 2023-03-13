@@ -1,4 +1,9 @@
 <?php
+// display errors, warnings and notices
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Set the content type to JSON
 header('content-type:application/json');
 
@@ -17,8 +22,6 @@ $msg = "Name: $name <br> Email: $mail <br> Mobile: $mobile <br> Class: $class";
 
 
 // Send the mail
-if(send_mail($mail, $subject, $msg)=='sent'){
-    echo json_encode(['status' => 'success']);
-}else{
-    echo json_encode(['status' => 'error']);
-}
+send_mail($mail, $subject, $msg);
+
+echo "<script>window.location.href='https://sreejaschools.com/thankyou.html'</script>";
