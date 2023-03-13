@@ -22,7 +22,7 @@ function prx($arr){
 
 function send_mail($email,$subject,$msg){
     //Load Composer's autoloader
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 

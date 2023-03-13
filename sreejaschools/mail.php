@@ -6,13 +6,19 @@ header('content-type:application/json');
 require('../configs/functions.php');
 
 // get mail, subject and message from the request
+$name = $_POST['name'];
 $mail = $_POST['mail'];
-$subject = $_POST['subject'];
-$msg = $_POST['msg'];
+$subject = 'Sreeja Schools - Admission Form';
+$mobile = $_POST['mobile'];
+$class = $_POST['class'];
+
+// Build the message
+$msg = "Name: $name <br> Email: $mail <br> Mobile: $mobile <br> Class: $class";
+
 
 // Send the mail
-send_mail($mail, $subject, $msg);
-
-
-// Return the results as a JSON object
-echo json_encode(['status' => 'success']);
+if(send_mail($mail, $subject, $msg)=='sent'){
+    echo json_encode(['status' => 'success']);
+}else{
+    echo json_encode(['status' => 'error']);
+}
