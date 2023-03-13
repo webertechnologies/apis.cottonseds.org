@@ -3,7 +3,6 @@
 header('content-type:application/json');
 
 // Include the database connection and functions files
-require('../configs/connection.php');
 require('../configs/functions.php');
 
 // get mail, subject and message from the request

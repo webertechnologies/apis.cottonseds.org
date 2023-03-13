@@ -51,7 +51,7 @@ $mail = new PHPMailer(true);
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = $msg;
-    $mail->AltBody = 'Thank you for being a part of STM. Use the following OTP to complete your Sign Up procedures. OTP is valid for 5 minutes. OTP : '.$otp;
+    $mail->AltBody = 'Email from Sreeja Schools';
 
     $mail->send();
     echo 'sent';
