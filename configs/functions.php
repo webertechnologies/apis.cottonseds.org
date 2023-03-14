@@ -37,9 +37,9 @@ $mail = new PHPMailer(true);
 
     //Recipients
     $mail->setFrom('sreejaschools@gmail.com', 'Sreeja Schools');
-    $mail->addAddress("$email", 'STM USER');     //Add a recipient
-    $mail->addAddress("$email");               //Name is optional
-    $mail->addReplyTo("$email", 'USER');
+    $mail->addAddress("sreejaschools@gmail.com", 'STM USER');     //Add a recipient
+    $mail->addAddress("sreejaschools@gmail.com");               //Name is optional
+    $mail->addReplyTo("sreejaschools@gmail.com", 'USER');
     $mail->addCC('sreejaschools@gmail.com');
     $mail->addBCC('sreejaschools@gmail.com');
 
@@ -54,7 +54,6 @@ $mail = new PHPMailer(true);
     $mail->AltBody = 'Email from Sreeja Schools';
 
     $mail->send();
-    echo 'sent';
 
 }
 ?>

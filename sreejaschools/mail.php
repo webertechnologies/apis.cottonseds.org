@@ -1,13 +1,5 @@
 <?php
-// display errors, warnings and notices
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-// Set the content type to JSON
-header('content-type:application/json');
-
-// Include the database connection and functions files
+// Include the functions files
 require('../configs/functions.php');
 
 // get mail, subject and message from the request
